@@ -1,6 +1,5 @@
 <template lang="pug">
 #app
-  img(src='assets/logo.png')
   h1 {{ msg }}
   h2 Essential Links
   ul

@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const {VueLoaderPlugin} = require('vue-loader')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -34,7 +35,8 @@ module.exports = {
     hints: false
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new CopyWebpackPlugin([{from: './src/assets', to: 'assets'}])
   ]
 }
 

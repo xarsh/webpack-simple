@@ -17,7 +17,8 @@ module.exports = {
       {test: /\.pug$/, loader: 'pug-plain-loader'},
       {test: /\.styl(us)?$/, use: ['vue-style-loader', 'css-loader', 'stylus-loader']},
       {test: /\.css$/, use: ['vue-style-loader', 'css-loader']},
-      {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/}
+      {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},
+      {test: /\.(png|jpg|gif|svg)$/, use: [{loader: 'file-loader'}]}
     ]
   },
   resolve: {
